@@ -37,9 +37,7 @@ const NFTInfo: React.FC<NFTInfoProps> = ({ nft }) => {
     const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${
       nft.url
     }&bgcolor=${getQrBgColorHexa()}&color=${getQrColorHexa()}`;
-
     setQrCodeUrl(url);
-    console.log(url);
   }, [qrColor, qrBgColor]);
 
   return (
@@ -99,12 +97,15 @@ const NFTInfo: React.FC<NFTInfoProps> = ({ nft }) => {
               >
                 Owner
               </span>
-              <span
+              <a
+                target={"_blank"}
+                rel="noreferrer"
+                href={nft.url}
                 className="text-lg font-bold block truncate"
                 style={{ color: secondaryColor }}
               >
                 {nft.owner}
-              </span>
+              </a>
             </p>
             <p className="mb-3">
               <span

@@ -50,4 +50,22 @@ export const collections = [
     imgUrl: "/assets/img/collections/PIGLETHH-7357ca.png",
     rank: 8,
   },
+  {
+    id: "APC-928458",
+    name: "Angry Penguins Colony",
+    imgUrl: "/assets/img/collections/APC-928458.png",
+    rank: 9,
+  },
+  {
+    id: "SAC-c60db0",
+    name: "Salvadorian Ape Club",
+    imgUrl: "/assets/img/collections/SAC-c60db0.png",
+    rank: 10,
+  },
+  /*{
+    id: "TOC-eea288",
+    name: "Tigers On Chain",
+    imgUrl: "/assets/img/collections/TOC-eea288.png",
+    rank: 11,
+  },*/
 ];
