@@ -29,7 +29,7 @@ const CollectionsList: React.FC<CollectionsListProps> = ({ isSearchable = true }
         <input id={"txt-searchCollection"} type="text" value={searchCollection} onChange={(e) => setSearchCollection(e.target.value)} className="w-full px-2 py-1 rounded outline-none bg-dark-600 border border-primary-500" />
       </div>
     }
-    <div className='grid grid-cols-12 gap-x-4 gap-y-6 justify-items-stretch'>
+    <div className='grid grid-cols-12 gap-x-4 gap-y-6 justify-items-stretch py-4'>
       {
         copyCollections.map((collection) => {
           return <div key={collection.id} className='col-span-6 md:col-span-3 xl:col-span-2 translation-all duration-200 ease-in-out hover:-translate-y-2' >
