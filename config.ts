@@ -23,12 +23,12 @@ export const collections = [
         imgUrl: "/assets/img/collections/GNOGONS-73222b.png",
         rank: 5
     },
-    {
+    /*{
         id: "MAIARPUNKS-3db7e8",
         name: "MaiarPunks",
         imgUrl: "/assets/img/collections/MAIARPUNKS-3db7e8.png",
         rank: 6
-    },
+    },*/
     {
         id: "HSWOLF-76e8bf",
         name: "High Street Wolf Society",
