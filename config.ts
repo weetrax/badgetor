@@ -68,4 +68,10 @@ export const collections = [
     imgUrl: "/assets/img/collections/TOC-eea288.png",
     rank: 11,
   },*/
+  {
+    id: "KROGAN-54c361",
+    name: "Krogan",
+    imgUrl: "/assets/img/collections/KROGAN-54c361.png",
+    rank: 11,
+  },
 ];
