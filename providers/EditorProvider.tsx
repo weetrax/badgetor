@@ -11,7 +11,6 @@ export const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
     const [primaryColor, setPrimaryColor] = useState<string>("#ed143d")
     const [secondaryColor, setSecondaryColor] = useState<string>("#ffffff")
 
-
     return <EditorContext.Provider value={{ backgroundColor, setBackgroundColor, primaryColor, setPrimaryColor, secondaryColor, setSecondaryColor }}>
         {children}
     </EditorContext.Provider>

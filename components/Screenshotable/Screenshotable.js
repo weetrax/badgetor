@@ -12,10 +12,7 @@ const Screenshot = ({ children }) => {
   });
   const ref = createRef(null);
 
-  const download = (
-    image,
-    { name = "strangers-badge", extension = "png" } = {}
-  ) => {
+  const download = (image, { name = "nft-badge", extension = "png" } = {}) => {
     const a = document.createElement("a");
     a.href = image;
     a.download = createFileName(extension, name);
@@ -41,7 +38,8 @@ const Screenshot = ({ children }) => {
       <div className="text-right mb-4">
         <button
           onClick={downloadScreenshot}
-          className="px-2 py-1 rounded bg-yellow-500 text-white"
+          className="px-2 py-1 rounded bg-primary-500 disabled:bg-primary-300"
+          disabled={isDownloading}
         >
           {isDownloading ? "Downloading..." : "Download as .png"}
         </button>

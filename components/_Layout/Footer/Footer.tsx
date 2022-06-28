@@ -8,20 +8,20 @@ type FooterProps = {
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <footer className="bg-primary-600 backdrop-filter backdrop-blur bg-opacity-70 text-white">
+    <footer className="bg-dark-600 backdrop-filter backdrop-blur bg-opacity-70">
       <Container>
         <ul className="py-12 text-center">
           <li>
             <p>
               &copy; {new Date().getFullYear()}{" "}
-              <span className="font-bold">Strangenerator </span> - A{" "}
+              <span className="font-bold">Badgetor </span> - An{" "}
               <a
-                href="http://thestrangersnft.club/"
+                href="https://elrond.com/"
                 target={"_blank"}
                 rel="noreferrer"
-                className="hover:text-yellow-500 duration-200 transition-colors ease-in-out"
+                className="hover:text-primary-500 duration-200 transition-colors ease-in-out"
               >
-                Strangers
+                Elrond
               </a>{" "}
               Community App
             </p>
@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = () => {
               href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr"
               target={"_blank"}
               rel="noreferrer"
-              className="pl-1 whitespace-nowrap text-ellipsis overflow-hidden hover:text-yellow-500 duration-200 transition-colors ease-in-out"
+              className="pl-1 whitespace-nowrap text-ellipsis overflow-hidden hover:text-primary-500 duration-200 transition-colors ease-in-out"
             >
               erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr
             </a>

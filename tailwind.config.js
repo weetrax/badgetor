@@ -12,8 +12,8 @@ module.exports = {
       gray: colors.neutral,
       indigo: colors.indigo,
       red: colors.rose,
-
-      yellow: {
+      yellow: colors.amber,
+      primary: {
         100: "#fbd0d8",
         200: "#f8a1b1",
         300: "#f4728b",
@@ -30,7 +30,7 @@ module.exports = {
       //https://www.tailwindshades.com/
       //or crtl g + ctrl k on hexa value (#007ce6)
 
-      primary: {
+      dark: {
         100: "#d1d2d4",
         200: "#a4a5a9",
         300: "#76777f",

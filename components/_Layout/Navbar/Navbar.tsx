@@ -6,12 +6,13 @@ import classNames from "classnames";
 import Container from "../Container";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { routes } from "../../../routes";
 
 type NavbarProps = {
   //
 };
 
-const navigation = [{ name: "Strangenerator", href: "/" }];
+const navigation = [{ name: "Badgetor", href: routes.home }, { name: "Collections", href: routes.collections }];
 
 const Navbar: React.FC<NavbarProps> = () => {
   const router = useRouter();
@@ -19,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-primary-600 backdrop-filter backdrop-blur bg-opacity-70 items-center sticky top-0 shadow-sm z-20"
+      className="bg-dark-600 backdrop-filter backdrop-blur bg-opacity-70 items-center sticky top-0 shadow-sm z-20"
     >
       {({ open }) => (
         <>
@@ -56,8 +57,8 @@ const Navbar: React.FC<NavbarProps> = () => {
                         <a
                           className={classNames(
                             router.pathname == item.href
-                              ? "bg-primary-500 text-white"
-                              : "text-gray-700 hover:bg-primary-500 hover:text-white duration-200 ease-in-out transition",
+                              ? "bg-dark-500 "
+                              : "hover:bg-dark-500 duration-200 ease-in-out transition",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={
@@ -82,8 +83,8 @@ const Navbar: React.FC<NavbarProps> = () => {
                     <a
                       className={classNames(
                         router.pathname == item.href
-                          ? "bg-primary-500 text-white"
-                          : "hover:bg-primary-500 hover:text-white text-gray-700",
+                          ? "bg-dark-500"
+                          : "hover:bg-dark-500",
                         "block px-3 py-2 rounded-md text-base font-medium duration-200 ease-in-out transition"
                       )}
                       aria-current={
