@@ -1,19 +1,22 @@
-import classNames from 'classnames';
-import Container from '../Container';
-import Link from 'next/link';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { routes } from '../../../routes';
-import { useRouter } from 'next/router';
-import Popup from '../Popup';
+import classNames from "classnames";
+import Container from "../Container";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { routes } from "../../../routes";
+import { useRouter } from "next/router";
+import Popup from "../Popup";
 
 type NavbarProps = {
   //
 };
 
-const navigation = [{ name: "Badgetor", href: routes.home }, { name: "Collections", href: routes.collections }];
+const navigation = [
+  { name: "Badgetor", href: routes.home },
+  { name: "Collections", href: routes.collections },
+];
 
 const Navbar: React.FC<NavbarProps> = () => {
   const router = useRouter();
@@ -73,34 +76,8 @@ const Navbar: React.FC<NavbarProps> = () => {
                   </div>
                 </div>
               </div>
-              <div>
-                <Popup title="" btnElement={(onClick) => <button onClick={onClick} className="outline-none">Donation</button>}>
-                  <p className='text-lg mb-2 text-semibold'>Hi fellow Elrond user !</p>
-                  <p className='mb-4'>
-                    You can support our work by giving us a little donation. It will help us to finance our website and the hosting.
-                  </p>
-                  <div className='flex flex-col gap-1 mb-4'>
-                    <p className="truncate text-primary-500 outline-none">Elrond:{" "}
-                      <a className='hover:text-primary-500' href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-                    </p>
-                    {
-                      /*
-                      <p className="truncate">Bitcoin:{" "}
-                        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-                      </p>
-                      <p className="truncate">Ethereum:{" "}
-                        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-                      </p>
-                      <p className="truncate">Tron:{" "}
-                        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-                      </p>
-                      */
-                    }
-                  </div>
-                  <p className='text-right text-primary-500'>
-                    Thanks !
-                  </p>
-                </Popup>
+              <div className="hidden sm:block">
+                <PopupDonation />
               </div>
             </div>
           </Container>
@@ -126,11 +103,58 @@ const Navbar: React.FC<NavbarProps> = () => {
                   </Link>
                 </Disclosure.Button>
               ))}
+              <div className="block sm:hidden px-3 py-2 hover:bg-dark-500 rounded">
+                <PopupDonation />
+              </div>
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
+  );
+};
+
+const PopupDonation = () => {
+  return (
+    <Popup
+      title=""
+      btnElement={(onClick) => (
+        <button onClick={onClick} className="outline-none w-full text-left">
+          Donation
+        </button>
+      )}
+    >
+      <p className="text-lg mb-2 text-semibold">Hi fellow Elrond user !</p>
+      <p className="mb-4">
+        You can support our work by giving us a little donation. It will help us
+        to finance our website and the hosting.
+      </p>
+      <div className="flex flex-col gap-1 mb-4">
+        <p className="truncate text-primary-500 outline-none">
+          Elrond:{" "}
+          <a
+            className="hover:text-primary-500"
+            href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr
+          </a>
+        </p>
+        {/*
+      <p className="truncate">Bitcoin:{" "}
+        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+      </p>
+      <p className="truncate">Ethereum:{" "}
+        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+      </p>
+      <p className="truncate">Tron:{" "}
+        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+      </p>
+      */}
+      </div>
+      <p className="text-right text-primary-500">Thanks !</p>
+    </Popup>
   );
 };
 
