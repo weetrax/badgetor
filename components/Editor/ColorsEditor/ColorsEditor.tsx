@@ -1,6 +1,6 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { useEditor } from "../../../hooks/useEditor";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useEditor } from '../../../hooks/useEditor';
 
 type ColorsEditorProps = {
   //

@@ -1,15 +1,11 @@
 import React, { createRef, useState } from "react";
 import PropTypes from "prop-types";
-import { useScreenshot, createFileName } from "use-react-screenshot";
+import { createFileName } from "use-react-screenshot";
 import * as htmlToImage from "html-to-image";
 
 const Screenshot = ({ children }) => {
   const [isDownloading, setIsDownloading] = useState(false);
 
-  const [image] = useScreenshot({
-    type: "image/png",
-    quality: 1.0,
-  });
   const ref = createRef(null);
 
   const download = (image, { name = "nft-badge", extension = "png" } = {}) => {

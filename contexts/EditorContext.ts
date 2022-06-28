@@ -12,7 +12,7 @@ type EditorContextType = {
 export const EditorContext = React.createContext<EditorContextType>({
     backgroundColor: "#161721",
     setBackgroundColor: () => { },
-    primaryColor: "#ed143d",
+    primaryColor: "#fca311",
     setPrimaryColor: () => { },
     secondaryColor: "#ffffff",
     setSecondaryColor: () => { },

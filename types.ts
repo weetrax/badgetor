@@ -47,3 +47,40 @@ export interface NFT {
   supply: string;
   ticker: string;
 }
+
+export interface Assets {
+  website: string;
+  description: string;
+  status: string;
+  pngUrl: string;
+  svgUrl: string;
+  lockedAccounts: string[];
+  extraTokens: string[];
+}
+
+export interface Roles {
+  address: string;
+  canCreate: boolean;
+  canBurn: boolean;
+  canAddQuantity: boolean;
+  canUpdateAttributes: boolean;
+  canAddUri: boolean;
+  canTransferRole: boolean;
+  roles: string[];
+}
+
+export interface Collection {
+  collection: string;
+  type: string;
+  name: string;
+  ticker: string;
+  owner: string;
+  timestamp: number;
+  canFreeze: boolean;
+  canWipe: boolean;
+  canPause: boolean;
+  canTransferNftCreateRole: boolean;
+  decimals: number;
+  assets: Assets;
+  roles: Roles;
+}

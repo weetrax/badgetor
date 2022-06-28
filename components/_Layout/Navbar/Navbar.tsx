@@ -1,12 +1,13 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import classNames from "classnames";
-import Container from "../Container";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { routes } from "../../../routes";
+import classNames from 'classnames';
+import Container from '../Container';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { routes } from '../../../routes';
+import { useRouter } from 'next/router';
+import Popup from '../Popup';
 
 type NavbarProps = {
   //
@@ -41,12 +42,12 @@ const Navbar: React.FC<NavbarProps> = () => {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="/assets/img/stranger.png"
+                    src="/assets/img/logo.svg"
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="/assets/img/stranger.png"
+                    src="/assets/img/logo.svg"
                     alt="Workflow"
                   />
                 </div>
@@ -71,6 +72,35 @@ const Navbar: React.FC<NavbarProps> = () => {
                     ))}
                   </div>
                 </div>
+              </div>
+              <div>
+                <Popup title="" btnElement={(onClick) => <button onClick={onClick} className="outline-none">Donation</button>}>
+                  <p className='text-lg mb-2 text-semibold'>Hi fellow Elrond user !</p>
+                  <p className='mb-4'>
+                    You can support our work by giving us a little donation. It will help us to finance our website and the hosting.
+                  </p>
+                  <div className='flex flex-col gap-1 mb-4'>
+                    <p className="truncate text-primary-500 outline-none">Elrond:{" "}
+                      <a className='hover:text-primary-500' href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+                    </p>
+                    {
+                      /*
+                      <p className="truncate">Bitcoin:{" "}
+                        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+                      </p>
+                      <p className="truncate">Ethereum:{" "}
+                        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+                      </p>
+                      <p className="truncate">Tron:{" "}
+                        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
+                      </p>
+                      */
+                    }
+                  </div>
+                  <p className='text-right text-primary-500'>
+                    Thanks !
+                  </p>
+                </Popup>
               </div>
             </div>
           </Container>
