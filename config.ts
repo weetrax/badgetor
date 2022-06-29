@@ -1,5 +1,11 @@
 export const collections = [
   {
+    id: "STRA-f777be",
+    name: "The Strangers",
+    imgUrl: "/assets/img/collections/STRA-f777be.png",
+    rank: 0,
+  },
+  {
     id: "GUARDIAN-3d6635",
     name: "Aquaverse",
     imgUrl: "/assets/img/collections/GUARDIAN-3d6635.png",
