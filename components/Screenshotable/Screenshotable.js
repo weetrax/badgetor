@@ -1,6 +1,4 @@
 import React, { createRef, useState } from "react";
-import PropTypes from "prop-types";
-import { createFileName } from "use-react-screenshot";
 import * as htmlToImage from "html-to-image";
 
 const Screenshot = ({ children }) => {
@@ -8,25 +6,38 @@ const Screenshot = ({ children }) => {
 
   const ref = createRef(null);
 
-  const download = (image, { name = "nft-badge", extension = "png" } = {}) => {
-    const a = document.createElement("a");
-    a.href = image;
-    a.download = createFileName(extension, name);
-    a.click();
-  };
-
   const downloadScreenshot = () => {
     setIsDownloading(true);
-    takeScreenShot(ref.current)
-      .then(download)
+    htmlToImage
+      .toPng(ref.current)
+      .then((dataUrl) => {
+        saveAs(dataUrl, "badge-info.png");
+      })
       .finally(() => {
         setIsDownloading(false);
       });
   };
 
-  const takeScreenShot = async (node) => {
-    const dataURI = await htmlToImage.toJpeg(node);
-    return dataURI;
+  const saveAs = (blob, fileName) => {
+    var elem = window.document.createElement("a");
+    elem.href = blob;
+    elem.download = fileName;
+    elem.style = "display:none;";
+    (document.body || document.documentElement).appendChild(elem);
+    if (typeof elem.click === "function") {
+      elem.click();
+    } else {
+      elem.target = "_blank";
+      elem.dispatchEvent(
+        new MouseEvent("click", {
+          view: window,
+          bubbles: true,
+          cancelable: true,
+        })
+      );
+    }
+    URL.revokeObjectURL(elem.href);
+    elem.remove();
   };
 
   return (
