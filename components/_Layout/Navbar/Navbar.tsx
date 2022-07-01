@@ -119,7 +119,7 @@ const PopupDonation = () => {
     <Popup
       title=""
       btnElement={(onClick) => (
-        <button onClick={onClick} className="outline-none w-full text-left">
+        <button onClick={onClick} className="outline-none w-full bg-primary-500 rounded px-4 py-2 text-sm font-medium text-white hover:bg-primary-400 transition-all duration-200 ease-in-out">
           Donation
         </button>
       )}
