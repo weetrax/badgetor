@@ -1,6 +1,7 @@
 import _Layout from '../components/_Layout';
 import NextNprogress from 'nextjs-progressbar';
 import '../styles/globals.css';
+import '../styles/app.css';
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
