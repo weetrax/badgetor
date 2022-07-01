@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <Container>
         <div className="py-16 text-center min-h-screen-nav flex flex-col items-center justify-center">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-bold">
               Generate your unique{" "}
               <div>
                 <span className="text-primary-500 ">
@@ -38,26 +38,30 @@ const Home: NextPage = () => {
                 Badge !
               </div>
             </h1>
-            <p className="py-4">
-              Create unique and 100% customizable NFT Badges with QR Code integration.
+            <p className="py-4 text-xl">
+              Create unique and 100% customizable NFT Badges with QR Code
+              integration.
             </p>
           </div>
         </div>
-        <div className="text-2xl font-bold mb-4 text-center md:text-left"><span className="text-primary-500">Millions</span> of possibilities</div>
+        <div className="text-3xl font-bold mb-12 text-center md:text-left">
+          <span className="text-primary-500">Millions</span> of possibilities
+        </div>
         <div className="grid grid-cols-2 gap-4 text-center md:text-left">
           <div className="col-span-2 md:col-span-1">
             <div className="h-full flex flex-col justify-between">
-              <div>
-                <p className="mb-2">
-                  Our badge editor allow you to generate and download unique and 100% customizable NFT Badges.
+              <div className="text-xl">
+                <p className="mb-4">
+                  Our badge editor allow you to generate and download unique and
+                  100% customizable NFT Badges.
                 </p>
                 <p className="mb-4">
-                  Choose your favorites colors and change the background, font and even the QR Code.
+                  Choose your favorites colors and change the background, font
+                  and even the QR Code.
                 </p>
               </div>
               <div>
-                <Link href={routes.collections}
-                >
+                <Link href={routes.collections}>
                   <a className="inline-flex justify-center rounded bg-primary-500 px-4 py-2 text-sm font-medium text-white hover:bg-primary-400">
                     Explore collections
                   </a>
@@ -71,12 +75,13 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="py-16">
-          <div className="text-2xl font-bold mb-4"><span className="text-primary-500">Top</span> collections</div>
+        <div className="pt-36 pb-12">
+          <div className="text-2xl font-bold">
+            <span className="text-primary-500">Top</span> collections
+          </div>
           <CollectionsList isSearchable={false} />
           <div className="text-right">
-            <Link href={routes.collections}
-            >
+            <Link href={routes.collections}>
               <a className="inline-flex justify-center rounded px-4 py-2 text-sm font-medium text-primary-500 hover:text-primary-400">
                 View all collections
               </a>
@@ -89,8 +94,9 @@ const Home: NextPage = () => {
 };
 
 const CursorBlink = () => {
-  return <>
-    <style jsx>{`
+  return (
+    <>
+      <style jsx>{`
         @keyframes blink {
           from,
           to {
@@ -105,8 +111,9 @@ const CursorBlink = () => {
           animation: blink 1s linear infinite forwards;
         }
       `}</style>
-    <span className="cursor blink">|</span>
-  </>
-}
+      <span className="cursor blink">|</span>
+    </>
+  );
+};
 
 export default Home;
