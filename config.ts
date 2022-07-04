@@ -21,7 +21,7 @@ export const collections = [
     quantity: 10000,
     min: 0,
     max: 9999,
-    rank: 3,
+    rank: 2,
   },
   {
     id: "DAPEZ-c88658",
@@ -30,13 +30,13 @@ export const collections = [
     quantity: 5555,
     min: 1,
     max: 5555,
-    rank: 4,
+    rank: 3,
   },
   {
     id: "GNOGONS-73222b",
     name: "Gnogons",
     imgUrl: "/assets/img/collections/GNOGONS-73222b.png",
-    rank: 5,
+    rank: 4,
   },
   /*{
         id: "MAIARPUNKS-3db7e8",
@@ -44,6 +44,12 @@ export const collections = [
         imgUrl: "/assets/img/collections/MAIARPUNKS-3db7e8.png",
         rank: 6
     },*/
+  {
+    id: "OAG-0eaf3b",
+    name: "Odd Apes Gang",
+    imgUrl: "/assets/img/collections/OAG-0eaf3b.png",
+    rank: 7,
+  },
   {
     id: "HSWOLF-76e8bf",
     name: "High Street Wolf Society",
