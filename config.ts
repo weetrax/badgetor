@@ -69,6 +69,24 @@ export const collections = [
     rank: 9,
   },
   {
+    id: "BDGA-a05446",
+    name: "Babies Degen Ape",
+    imgUrl: "/assets/img/collections/BDGA-a05446.png",
+    rank: 9,
+  },
+  {
+    id: "MANY-39af2c",
+    name: "The Faceless Many",
+    imgUrl: "/assets/img/collections/MANY-39af2c.png",
+    rank: 9,
+  },
+  {
+    id: "QUACK-f01e02",
+    name: "Elrond Ducks",
+    imgUrl: "/assets/img/collections/QUACK-f01e02.png",
+    rank: 9,
+  },
+  {
     id: "SAC-c60db0",
     name: "Salvadorian Ape Club",
     imgUrl: "/assets/img/collections/SAC-c60db0.png",
