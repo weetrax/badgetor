@@ -92,6 +92,24 @@ export const collections = [
     imgUrl: "/assets/img/collections/SAC-c60db0.png",
     rank: 10,
   },
+  {
+    id: "WWWINE-5a5331",
+    name: "Wwwine",
+    imgUrl: "/assets/img/collections/WWWINE-5a5331.png",
+    rank: 10,
+  },
+  {
+    id: "WARRIORZ-2f0986",
+    name: "Elrond Warriorz",
+    imgUrl: "/assets/img/collections/WARRIORZ-2f0986.png",
+    rank: 10,
+  },
+  {
+    id: "PITTZ-1a4c2d",
+    name: "CryptoPittz",
+    imgUrl: "/assets/img/collections/PITTZ-1a4c2d.png",
+    rank: 10,
+  },
   /*{
     id: "TOC-eea288",
     name: "Tigers On Chain",
