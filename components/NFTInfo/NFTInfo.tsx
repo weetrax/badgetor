@@ -38,7 +38,7 @@ const NFTInfo: React.FC<NFTInfoProps> = ({ nft }) => {
       nft.url
     }&bgcolor=${getQrBgColorHexa()}&color=${getQrColorHexa()}`;
     setQrCodeUrl(url);
-  }, [qrColor, qrBgColor]);
+  }, [nft, qrColor, qrBgColor]);
 
   return (
     <>

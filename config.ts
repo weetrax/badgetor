@@ -1,5 +1,11 @@
 export const collections = [
   {
+    id: "MAFIA-bd0abc",
+    name: "Elrond Mafia",
+    imgUrl: "/assets/img/collections/MAFIA-bd0abc.png",
+    rank: 0,
+  },
+  {
     id: "STRA-f777be",
     name: "The Strangers",
     imgUrl: "/assets/img/collections/STRA-f777be.png",
