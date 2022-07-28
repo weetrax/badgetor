@@ -85,7 +85,9 @@ const Home: NextPage = () => {
             items={collections
               .filter((x) => x.premium && x.premium)
               .map((x, i) => {
-                return <CollectionItem hoverEffect={false} collection={x} />;
+                return (
+                  <CollectionItem key={i} hoverEffect={false} collection={x} />
+                );
               })}
           />
           <div className="text-right">
