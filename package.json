@@ -33,7 +33,9 @@
     "next": "12.1.6",
     "nextjs-progressbar": "^0.0.14",
     "react": "18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.3.0",
     "react-simple-typewriter": "^3.0.1",
     "swiper": "^8.3.2",
     "use-react-screenshot": "^3.0.0"
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-dom": "18.0.5",
     "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",

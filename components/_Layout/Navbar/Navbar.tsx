@@ -7,7 +7,7 @@ import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { routes } from "../../../routes";
 import { useRouter } from "next/router";
-import Popup from "../Popup";
+import PopupDonation from "../../PopupDonation";
 
 type NavbarProps = {
   //
@@ -77,7 +77,16 @@ const Navbar: React.FC<NavbarProps> = () => {
                 </div>
               </div>
               <div className="hidden sm:block">
-                <PopupDonation />
+                <PopupDonation
+                  btnElement={(onClick) => (
+                    <button
+                      onClick={onClick}
+                      className="outline-none w-full bg-primary-500 rounded px-4 py-2 text-sm font-medium text-white hover:bg-primary-400 transition-all duration-200 ease-in-out"
+                    >
+                      Donation
+                    </button>
+                  )}
+                />
               </div>
             </div>
           </Container>
@@ -104,57 +113,22 @@ const Navbar: React.FC<NavbarProps> = () => {
                 </Disclosure.Button>
               ))}
               <div className="block sm:hidden px-3 py-2 hover:bg-dark-500 rounded">
-                <PopupDonation />
+                <PopupDonation
+                  btnElement={(onClick) => (
+                    <button
+                      onClick={onClick}
+                      className="outline-none w-full bg-primary-500 rounded px-4 py-2 text-sm font-medium text-white hover:bg-primary-400 transition-all duration-200 ease-in-out"
+                    >
+                      Donation
+                    </button>
+                  )}
+                />
               </div>
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
-  );
-};
-
-const PopupDonation = () => {
-  return (
-    <Popup
-      title=""
-      btnElement={(onClick) => (
-        <button onClick={onClick} className="outline-none w-full bg-primary-500 rounded px-4 py-2 text-sm font-medium text-white hover:bg-primary-400 transition-all duration-200 ease-in-out">
-          Donation
-        </button>
-      )}
-    >
-      <p className="text-lg mb-2 text-semibold">Hi fellow Elrond user !</p>
-      <p className="mb-4">
-        You can support our work by giving us a little donation. It will help us
-        to finance our website and the hosting.
-      </p>
-      <div className="flex flex-col gap-1 mb-4">
-        <p className="truncate text-primary-500 outline-none">
-          Elrond:{" "}
-          <a
-            className="hover:text-primary-500"
-            href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr"
-            target={"_blank"}
-            rel="noreferrer"
-          >
-            erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr
-          </a>
-        </p>
-        {/*
-      <p className="truncate">Bitcoin:{" "}
-        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-      </p>
-      <p className="truncate">Ethereum:{" "}
-        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-      </p>
-      <p className="truncate">Tron:{" "}
-        <a href="https://explorer.elrond.com/accounts/erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr" target={"_blank"} rel="noreferrer">erd1l9gr2fn7qy86q26xqj4wmner5evkz8q277nerckd8xy5502klzjs5mxcfr</a>
-      </p>
-      */}
-      </div>
-      <p className="text-right text-primary-500">Thanks !</p>
-    </Popup>
   );
 };
 
