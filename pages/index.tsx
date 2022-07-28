@@ -7,6 +7,8 @@ import { useTypewriter } from "react-simple-typewriter";
 import type { NextPage } from "next";
 import Link from "next/link";
 import { routes } from "../routes";
+import CarouselCoverflow from "../components/_Layout/CarouselCoverflow";
+import CollectionItem from "../components/Collections/CollectionItem";
 
 const Home: NextPage = () => {
   const { text } = useTypewriter({
@@ -76,10 +78,16 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="pt-36 pb-12">
-          <div className="text-2xl font-bold">
+          <div className="text-3xl font-bold mb-12 text-center md:text-left">
             <span className="text-primary-500">Top</span> collections
           </div>
-          <CollectionsList isSearchable={false} />
+          <CarouselCoverflow
+            items={collections
+              .filter((x) => x.premium && x.premium)
+              .map((x, i) => {
+                return <CollectionItem hoverEffect={false} collection={x} />;
+              })}
+          />
           <div className="text-right">
             <Link href={routes.collections}>
               <a className="inline-flex justify-center rounded px-4 py-2 text-sm font-medium text-primary-500 hover:text-primary-400">

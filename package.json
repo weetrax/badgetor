@@ -35,6 +35,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-simple-typewriter": "^3.0.1",
+    "swiper": "^8.3.2",
     "use-react-screenshot": "^3.0.0"
   },
   "devDependencies": {

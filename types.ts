@@ -1,3 +1,5 @@
+import { ParsedUrlQuery } from "querystring";
+
 export interface Medium {
   url: string;
   originalUrl: string;
@@ -83,4 +85,8 @@ export interface Collection {
   decimals: number;
   assets: Assets;
   roles: Roles;
+}
+
+export interface IParams extends ParsedUrlQuery {
+  id: string;
 }

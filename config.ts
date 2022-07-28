@@ -4,12 +4,14 @@ export const collections = [
     name: "Elrond Mafia",
     imgUrl: "/assets/img/collections/MAFIA-bd0abc.png",
     rank: 0,
+    premium: true,
   },
   {
     id: "STRA-f777be",
     name: "The Strangers",
     imgUrl: "/assets/img/collections/STRA-f777be.png",
     rank: 0,
+    premium: true,
   },
   {
     id: "GUARDIAN-3d6635",
@@ -19,6 +21,7 @@ export const collections = [
     min: 1,
     max: 9999,
     rank: 1,
+    premium: true,
   },
   {
     id: "DRIFTERS-efd96c",
@@ -28,6 +31,7 @@ export const collections = [
     min: 0,
     max: 9999,
     rank: 2,
+    premium: true,
   },
   {
     id: "DAPEZ-c88658",
@@ -97,6 +101,7 @@ export const collections = [
     name: "Salvadorian Ape Club",
     imgUrl: "/assets/img/collections/SAC-c60db0.png",
     rank: 10,
+    premium: true,
   },
   {
     id: "WWWINE-5a5331",

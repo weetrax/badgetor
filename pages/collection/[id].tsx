@@ -4,7 +4,7 @@ import Head from "next/head";
 import NFTInfo from "../../components/NFTInfo";
 import React, { useEffect, useState } from "react";
 import Screenshotable from "../../components/Screenshotable";
-import { Collection, NFT } from "../../types";
+import { Collection, IParams, NFT } from "../../types";
 import { EditorProvider } from "../../providers/EditorProvider";
 import {
   getCollection,
@@ -12,13 +12,10 @@ import {
   getNftByIdFromCollectionName,
 } from "../../services";
 import { useLoadingScreen } from "../../hooks/useScreenLoading";
-import { useRouter } from "next/router";
-import type { NextPage } from "next";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { collections } from "../../config";
 
-const CollectionsId: NextPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
-
+const CollectionsId: NextPage<{ id: string }> = ({ id }) => {
   const [collection, setCollection] = useState<Collection | null>(null);
   const [nft, setNft] = useState<NFT | null>(null);
   const [nftCount, setNftCount] = useState<number>(100);
@@ -158,6 +155,22 @@ const CollectionsId: NextPage = () => {
       </Container>
     </>
   );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const arr: string[] = collections.map((x) => x.id);
+  const paths = arr.map((id) => {
+    return {
+      params: { id },
+    };
+  });
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { id } = context.params as IParams;
+  const props = { id };
+  return { props };
 };
 
 export default CollectionsId;
