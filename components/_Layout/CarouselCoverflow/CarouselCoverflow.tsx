@@ -28,7 +28,7 @@ const CarouselCoverflow: React.FC<CarouselCoverflowProps> = ({ items }) => {
         },
       }}
       coverflowEffect={{
-        rotate: 29,
+        rotate: 10,
         stretch: 20,
         depth: 350,
         modifier: 1,
