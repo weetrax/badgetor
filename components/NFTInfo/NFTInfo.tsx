@@ -59,7 +59,10 @@ const NFTInfo: React.FC<NFTInfoProps> = ({ nft }) => {
         </div>
         <div className="flex flex-col md:flex-row h-full items-center">
           <div className="" style={{ minWidth: "384px" }}>
-            <img className="rounded-l md:max-h-96" src={nft.url}></img>
+            <img
+              className="rounded-l md:max-h-96"
+              src={nft.media[0]?.originalUrl ?? nft.url}
+            ></img>
           </div>
           <div className="text-center py-2 px-2 md:py-0 md:text-left w-full erd-info">
             <p className="mb-3">
