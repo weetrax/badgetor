@@ -28,15 +28,13 @@ const NFTInfo: React.FC<NFTInfoProps> = ({ nft }) => {
   };
 
   const [qrCodeUrl, setQrCodeUrl] = useState<string>(
-    `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${
-      nft.url
+    `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${nft.url
     }&bgcolor=${getQrBgColorHexa()}&color=${getQrColorHexa()}`
   );
 
   useEffect(() => {
-    const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${
-      nft.url
-    }&bgcolor=${getQrBgColorHexa()}&color=${getQrColorHexa()}`;
+    const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${nft.url
+      }&bgcolor=${getQrBgColorHexa()}&color=${getQrColorHexa()}`;
     setQrCodeUrl(url);
   }, [nft, qrColor, qrBgColor]);
 
@@ -61,7 +59,7 @@ const NFTInfo: React.FC<NFTInfoProps> = ({ nft }) => {
           <div className="" style={{ minWidth: "384px" }}>
             <img
               className="rounded-l md:max-h-96"
-              src={nft.media[0]?.originalUrl ?? nft.url}
+              src={nft.media[0]?.thumbnailUrl ?? nft.url}
             ></img>
           </div>
           <div className="text-center py-2 px-2 md:py-0 md:text-left w-full erd-info">
